@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tired Game Studio</title>
+    <title>Tired Brain Studio | Innovative Game Development</title>
+    <meta name="description" content="Tired Brain Studio: Drinking coffee and making games. Explore our fun and educational games like Litera Scrabble and Kids Charades.">
     <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -40,20 +42,26 @@
             margin: 0 0 2em;
             font-weight: 300;
         }
-        .screenshots {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .swiper-container {
+            padding: 2em 0;
             opacity: 0;
             transform: translateY(50px);
             transition: all 1s ease;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .screenshots img {
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+        .swiper-slide img {
             width: 250px;
-            /* height: 150px; */
-            margin: 10px;
+            margin: 5px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .swiper-slide {
+            text-align: center;
         }
         .appstore-link {
             display: inline-block;
@@ -69,13 +77,6 @@
             background: #ddd;
             color: #6200ea;
         }
-        @media (max-width: 768px) {
-            .screenshots img {
-                width: 100px;
-                /* height: 100px; */
-                margin: 5px;
-            }
-        }
         header > h1 {
             display: flex;
             align-items: center;
@@ -88,22 +89,38 @@
             width: 50px;
             border-radius: 14px;
         }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <header>
-
-        <h1><img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp"> Tired Brain Studio</h1>
-        <p>Drinking cofee and making games</p>
+        <h1><img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp" alt="Tired Brain Studio Logo"> Tired Brain Studio</h1>
+        <p>Drinking coffee and making games</p>
     </header>
     <div class="game" id="game1">
         <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2.webp" alt="Litera Scrabble Logo">
         <h2>Litera Scrabble</h2>
         <p>A fun and educational word game where you can test your vocabulary skills.</p>
-        <div class="screenshots">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s1.webp" alt="Litera Scrabble Screenshot 1">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s2.webp" alt="Litera Scrabble Screenshot 2">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s3.webp" alt="Litera Scrabble Screenshot 3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s1.webp" alt="Litera Scrabble Screenshot 1"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s2.webp" alt="Litera Scrabble Screenshot 2"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s3.webp" alt="Litera Scrabble Screenshot 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
         <a href="https://apps.apple.com/us/app/litera-scrabble/id6504444568" class="appstore-link">Download on the App Store</a>
     </div>
@@ -111,13 +128,24 @@
         <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1.webp" alt="Kids Charades Logo">
         <h2>Kids Charades!</h2>
         <p>Experience the joy of acting, guessing, and laughter as you delve into a wide variety of fun-filled cards all featuring vibrant, easy-to-understand images. With our intuitive, kid-friendly interface, game time has never been more exciting or simpler.</p>
-        <div class="screenshots">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s1.webp" alt="Color Match Screenshot 1">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s2.webp" alt="Color Match Screenshot 2">
-            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s3.webp" alt="Color Match Screenshot 3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s1.webp" alt="Kids Charades Screenshot 1"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s2.webp" alt="Kids Charades Screenshot 2"></div>
+                <div class="swiper-slide"><img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s3.webp" alt="Kids Charades Screenshot 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
         <a href="https://apps.apple.com/us/app/kids-charades/id6451126694" class="appstore-link">Download on the App Store</a>
     </div>
+    <footer>
+        <p>&copy; 2024 Tired Brain Studio. All rights reserved.</p>
+        <p>
+            <a href="https://tiredbrainstudio.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://tiredbrainstudio.com/terms-of-service">Terms of Service</a>
+        </p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const options = {
@@ -126,14 +154,34 @@
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.querySelector('.screenshots').style.opacity = 1;
-                        entry.target.querySelector('.screenshots').style.transform = 'translateY(0)';
+                        entry.target.querySelector('.swiper-container').style.opacity = 1;
+                        entry.target.querySelector('.swiper-container').style.transform = 'translateY(0)';
                         observer.unobserve(entry.target);
                     }
                 });
             }, options);
             document.querySelectorAll('.game').forEach(game => {
                 observer.observe(game);
+            });
+
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: "auto",
+                    },
+                    768: {
+                        slidesPerView: "auto",
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                }
             });
         });
     </script>
