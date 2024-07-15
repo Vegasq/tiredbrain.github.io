@@ -1,8 +1,141 @@
-<html>
-  <head>
-    <title>Tired Brain</title>
-  </head>
-  <body>
-    <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp">
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tired Game Studio</title>
+    <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+        }
+        header {
+            background: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+        .game {
+            width: 100%;
+            padding: 2em 0;
+            color: white;
+            text-align: center;
+        }
+        .game:nth-child(odd) {
+            background: #03a9f4;
+        }
+        .game:nth-child(even) {
+            background: #8bc34a;
+        }
+        .game h2 {
+            margin: 0 0 1em;
+            font-weight: 500;
+        }
+        .game p {
+            margin: 0 0 2em;
+            font-weight: 300;
+        }
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+        .screenshots img {
+            width: 250px;
+            /* height: 150px; */
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .appstore-link {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.75em 1.5em;
+            background: #fff;
+            color: #6200ea;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .appstore-link:hover {
+            background: #ddd;
+            color: #6200ea;
+        }
+        @media (max-width: 768px) {
+            .screenshots img {
+                width: 100px;
+                /* height: 100px; */
+                margin: 5px;
+            }
+        }
+        header > h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header > h1 > img {
+            padding-right: 10px;
+        }
+        .logo {
+            width: 50px;
+            border-radius: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1><img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp"> Tired Brain Studio</h1>
+        <p>Drinking cofee and making games</p>
+    </header>
+    <div class="game" id="game1">
+        <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2.webp" alt="Litera Scrabble Logo">
+        <h2>Litera Scrabble</h2>
+        <p>A fun and educational word game where you can test your vocabulary skills.</p>
+        <div class="screenshots">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s1.webp" alt="Litera Scrabble Screenshot 1">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s2.webp" alt="Litera Scrabble Screenshot 2">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g2s3.webp" alt="Litera Scrabble Screenshot 3">
+        </div>
+        <a href="https://apps.apple.com/us/app/litera-scrabble/id6504444568" class="appstore-link">Download on the App Store</a>
+    </div>
+    <div class="game" id="game2">
+        <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1.webp" alt="Kids Charades Logo">
+        <h2>Kids Charades!</h2>
+        <p>Experience the joy of acting, guessing, and laughter as you delve into a wide variety of fun-filled cards all featuring vibrant, easy-to-understand images. With our intuitive, kid-friendly interface, game time has never been more exciting or simpler.</p>
+        <div class="screenshots">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s1.webp" alt="Color Match Screenshot 1">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s2.webp" alt="Color Match Screenshot 2">
+            <img src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/g1s3.webp" alt="Color Match Screenshot 3">
+        </div>
+        <a href="https://apps.apple.com/us/app/kids-charades/id6451126694" class="appstore-link">Download on the App Store</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const options = {
+                threshold: 0.5
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelector('.screenshots').style.opacity = 1;
+                        entry.target.querySelector('.screenshots').style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+            document.querySelectorAll('.game').forEach(game => {
+                observer.observe(game);
+            });
+        });
+    </script>
+</body>
 </html>
