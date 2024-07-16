@@ -73,6 +73,12 @@ header > h1 {
     align-items: center;
     justify-content: center;
 }
+
+.game > .logo {
+    width: 50px;
+    border-radius: 10px;
+}
+
 h1 > .logo {
     width: 50px;
     border-radius: 14px;
