@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="icon" type="image/webp" href="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp" alt="Tired Brain Studio Logo">
+            <span class="title">{{ site.title }}</span>
+        </h1>
+        <p>Drinking coffee and making games</p>
+    </header>
+    {{ content }}
+    <footer>
+        <p>&copy; 2024 Tired Brain Studio. All rights reserved.</p>
+        <p>
+            <a href="https://tiredbrainstudio.com/privacy-policy">Privacy Policy</a> |
+            <a href="https://tiredbrainstudio.com/terms-of-service">Terms of Service</a>
+        </p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

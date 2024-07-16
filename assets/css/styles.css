@@ -1,0 +1,100 @@
+html {
+    background: #6200ea;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+}
+header {
+    background: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+.game {
+    width: 100%;
+    padding: 2em 0;
+    color: white;
+    text-align: center;
+}
+.game:nth-child(odd) {
+    background: #03a9f4;
+}
+.game:nth-child(even) {
+    background: #8bc34a;
+}
+.game h2 {
+    margin: 0 0 1em;
+    font-weight: 500;
+}
+.game p {
+    margin: 0 0 2em;
+    font-weight: 300;
+}
+.swiper-container {
+    padding: 2em 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+.swiper-slide img {
+    width: 250px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.swiper-slide {
+    text-align: center;
+}
+.appstore-link {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background: #fff;
+    color: #6200ea;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+.appstore-link:hover {
+    background: #ddd;
+    color: #6200ea;
+}
+header > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 > .logo {
+    width: 50px;
+    border-radius: 14px;
+}
+h1 > .title {
+    padding-left: 10px;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.game > p {
+    max-width: 800px;
+    margin: 0 auto;
+}

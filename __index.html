@@ -85,12 +85,12 @@
             align-items: center;
             justify-content: center;
         }
-        header > h1 > img {
-            padding-right: 10px;
-        }
-        .logo {
+        h1 > .logo {
             width: 50px;
             border-radius: 14px;
+        }
+        h1 > .title {
+            padding-left: 10px;
         }
         footer {
             background: #333;
@@ -110,11 +110,15 @@
             max-width: 800px;
             margin: 0 auto;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <h1><img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp" alt="Tired Brain Studio Logo"> Tired Brain Studio</h1>
+        <h1>
+            <img class="logo" src="https://raw.githubusercontent.com/Vegasq/tiredbrain.github.io/main/brain.webp" alt="Tired Brain Studio Logo">
+            <span class="title">Tired Brain Studio</span>
+        </h1>
         <p>Drinking coffee and making games</p>
     </header>
     <div class="game" id="game1">
